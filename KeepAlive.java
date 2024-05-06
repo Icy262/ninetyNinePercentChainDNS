@@ -12,7 +12,7 @@ class KeepAlive extends Thread {
 			socket.close();
 		} catch(Exception e) {
 			if(e instanceof SocketTimeoutException) {
-				//REMOVE IP FROM LIST
+				NodeIP.removeIP(ip);
 			} else {
 				System.out.println();
 			}
