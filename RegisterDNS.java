@@ -3,7 +3,7 @@ import java.net.Socket;
 import java.lang.Thread;
 import java.io.ObjectInputStream;
 
-class DNSResponse extends Thread {
+class RegisterDNS extends Thread {
 	public void run() {
 		int port=9937;
 		try {
