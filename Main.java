@@ -7,7 +7,7 @@ public class Main {
 				for(int i=0; i<NodeIP.getSize(); i++) {
 					new KeepAlive(NodeIP.getIP(i)).start();
 				}
-				Thread.sleep(60000);
+				Thread.sleep(300000);
 			}
 		} catch(Exception e) {
 			System.out.println(e);
