@@ -5,7 +5,7 @@ import java.io.ObjectInputStream;
 
 class RegisterDNS extends Thread {
 	public void run() {
-		int port=9938;
+		int port=9941;
 		try {
 			ServerSocket socket=new ServerSocket(port);
 			while(true) {
