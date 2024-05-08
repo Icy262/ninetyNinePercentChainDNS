@@ -5,7 +5,7 @@ import java.io.ObjectOutputStream;
 
 class DNSResponse extends Thread {
 	public void run() {
-		int port=9937;
+		int port=9940;
 		try {
 			ServerSocket socket=new ServerSocket(port);
 			while(true) {
