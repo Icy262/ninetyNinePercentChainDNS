@@ -5,7 +5,7 @@ import java.net.SocketTimeoutException;
 class KeepAlive extends Thread {
 	private String ip;
 	public void run() {
-		int port=9937;
+		int port=9939;
 		try {
 			Socket socket=new Socket(ip, port);
 			socket.setSoTimeout(10000);
