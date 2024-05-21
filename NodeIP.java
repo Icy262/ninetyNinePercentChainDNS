@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class NodeIP {
 	private static ArrayList<String> nodeIPs=new ArrayList<String>();
-	static int currentIndex=0;
+	static int currentIndex=-1;
 	public static void addIP(String ip) {
 		for(int i=0; i<nodeIPs.size(); i++) {
 			if(nodeIPs.get(i).equalsIgnoreCase(ip)) {
@@ -23,7 +23,7 @@ public class NodeIP {
 	public static String getNextIP() {
 		currentIndex++;
 		if(currentIndex==nodeIPs.size()) {
-			currentIndex-=nodeIPs.size();
+			currentIndex=0;
 		}
 		return getIP(currentIndex);
 	}
