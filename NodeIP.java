@@ -21,7 +21,10 @@ public class NodeIP {
 		return nodeIPs.size();
 	}
 	public static String getNextIP() {
-		currentIndex=currentIndex++%nodeIPs.size();
+		currentIndex++;
+		if(currentIndex==nodeIPs.size()) {
+			currentIndex-=nodeIPs.size();
+		}
 		return getIP(currentIndex);
 	}
 }
