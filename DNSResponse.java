@@ -5,6 +5,9 @@ import java.io.ObjectOutputStream;
 class DNSResponse extends Thread {
 	Socket connection;
 	public void run() {
+		if(NodeIP.getSize()==0) {
+			return;
+		}
 		try {
 			ObjectOutputStream write=new ObjectOutputStream(connection.getOutputStream());
 			for(int i=0; i<10; i++) {
