@@ -7,7 +7,7 @@ class RegisterDNS extends Thread {
 	public void run() {
 		try {
 			ObjectInputStream read=new ObjectInputStream(connection.getInputStream());
-			NodeIP.addIP((String) read.readObject());
+			NodeIP.addIP(read.readUTF());
 			read.close();
 		} catch(Exception e) {
 			e.printStackTrace();
